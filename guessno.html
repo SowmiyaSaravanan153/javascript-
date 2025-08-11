@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> 
+            guess the number 
+        </title>
+    </head>
+    <body>
+
+        <h1> Enter the number </h1>
+        <input type=" text" placeholder =" enter here " id ="guessno" />
+        <button type = "submit" id = "submit"> Submit </button> 
+        <p id ="result"> </p>
+
+                <script>
+            let randomno = Math.floor( Math.random()*11);
+           
+            document.getElementById("submit").addEventListener("click", function() {
+                 let userenters = document.getElementById("guessno");
+                 if (userenters.value == randomno){
+                     document.getElementById("result").innerText = "Good work";
+                 }
+                 else {
+                    document.getElementById("result").innerText = "Not Matched";
+                 }
+
+            }
+        )
+        </script>
+    </body>
+</html>
